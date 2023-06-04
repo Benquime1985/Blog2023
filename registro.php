@@ -15,3 +15,7 @@
         </form>
         <p>No Tienes una cuenta?<a href="acceder.php"> Iniciar Seccion</a></p>
     </section>
+
+<?php
+    include 'includes/footer.php';
+?>
