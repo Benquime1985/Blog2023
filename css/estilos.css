@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,800&family=Roboto+Slab:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Menu de colores de la pagina*/
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #00eeff;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/*Ajuste del cuerpo*/
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/*Ajuste de las secciones*/
+section{
+    min-height: 100vh;
+    padding: 3rem 9% 2rem;
+}
+
+/*-----------------------------------------------*/
+
+/*Primer seccion de inicio*/
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Imagen del inicio de la pagina*/
+.inicio-img img {
+    width: 30vw;
+}
+/*Contenido de la seccion de inicio h3*/
+.inicio-content h3{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.inicio-content h3:nth-of-type(2){
+    margin-bottom: 1.5rem;
+}
+/*Remarcado de palabra*/
+span {
+    color: var(--main-color);
+}
+/*Contenido de la seccion de inicio h1*/
+.inicio-content h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+/*Contenido de la seccion de inicio para los parrafos*/
+.inicio-content p {
+    font-size: 1.5rem;
+}
+/*Menu de iconos para las redes sociales*/
+.social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .15rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+/*ajuste de color y medidas de los redes sociales*/
+.social-icon a:hover {
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+/*Boton de la seccion de inicio*/
+.btn {
+    display: inline-block;
+    padding: 1.4rem 1.4rem;
+    background: var(--main-color);
+    border-radius: 5rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 700;
+}
+
+/*-----------------------------------------------*/
+
+/*Apartado de nosotros*/
+.nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    gap: 11rem;
+    background: var(--second-bg-color);
+}
+/*Imagenes de la seccion de nosotros*/
+.nosotros-img {
+    width: 29vw;
+}
+/*Titulo de Nosotros*/
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+/*Ajuste de titulo de nosotros*/
+.nosotros-cont h2 {
+    text-align: left;
+    line-height: 1.8;
+}
+/*Titulo secundario de nosotros = contenido de la seccion nosotros*/
+.nosotros-cont h3 {
+    font-size: 2.3rem;
+}
+/*Parrafo de la seccion nosotros*/
+.nosotros-cont p {
+    font-size: 1.2rem;
+    margin: 3rem -4px 4rem;
+}
+
+/*-----------------------------------------------*/
+
+.destinos {
+    background: var(--second-bg-color);
+}
+
+.destinos h2 {
+    margin-bottom: 2rem;
+}
+
+.destinos-cont {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.destinos-cont .destino-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.destino-box img {
+    width: 300%;
+    transition: .5s ease;
+}
+
+.destino-box:hover img {
+    transform: scale(1.1);
+}
+
+.destino-box .destino-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.destino-box:hover .destino-layer {
+    transform: translateY(0);
+}
+
+.destino-layer h4{
+    font-size: 2rem;
+}
+
+.destino-layer p {
+    font-size: 1.2rem;
+    margin: .3rem 0 1rem;
+}
+
+.destino-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.destino-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+/*-------------------------------------------------*/
+
+   /* Estilos para el contenedor fluido */
+    .container-fluid {
+      background-color: var(--bg-color);
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .container-fluid h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .col-md-4 {
+      width: 32%;
+      margin-bottom: 20px;
+      background-color: var(--second-bg-color);
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .col-md-4 img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .col-md-4 h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .col-md-4 .date {
+      font-weight: bold;
+    }
+
+    .col-md-4 p {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
