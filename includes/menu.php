@@ -25,7 +25,7 @@
                                 <li><a class="dropdown-item" href="#">Contactanos</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Acceder</a></li>
+                        <li class="nav-item"><a class="nav-link" href="acceder.php">Acceder</a></li>
                         <li class="nav-item"><a class="nav-link" href="registro.php">Registrarse</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Salir</a></li>
                     </ul>

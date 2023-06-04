@@ -30,10 +30,11 @@ body {
 }
 
 /*Ajuste de las secciones*/
-section{
-    min-height: 100vh;
+section {
+    min-height: 106vh;
     padding: 3rem 9% 2rem;
 }
+
 
 /*-----------------------------------------------*/
 
@@ -263,4 +264,160 @@ span {
       font-size: 14px;
       margin-bottom: 5px;
     }
-    
+    /*-------------------------------------*/
+    /* Estilos para el acceder */
+
+    .login {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 90vh;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .login h1 {
+        font-size: 3em;
+    }
+
+    .login h2 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1em;
+        font-size: 2.5em;
+    }
+
+    .login form {
+        padding: 1.5em;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 500px;
+        border-radius: 20px;
+        border: 2px solid var(--main-color);
+    }
+
+    .login form label {
+        width: 100%;
+        padding: 0.2em;
+        margin-bottom: 0.5em;
+    }
+
+    .login form input {
+        width: 100%;
+        margin-bottom: 1em;
+        padding: 0.8em;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: var(--text-color);
+    }
+
+    .login form input[type='submit']{
+        margin-top: 1.5em;
+        background-color: var(--main-color);
+        color: var(--text-color);
+    }
+
+    .login form input[type='submit']:active {
+        transform: scale(0.97);
+    }
+
+    .login p {
+        margin-top: 1.2em;
+    }
+
+    .login p a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .login button {
+        background-color: var(--second-bg-color);
+        color: var(--text-color);
+        border: none;
+        padding:  0.5em 1em;
+        border-radius: 9px;
+        margin: top 1.5em;
+        font-size: 1em;
+    }
+
+    /*-------------------------------------*/
+    /* Estilos para el registro */
+
+    .registro {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 127vh;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .registro h1 {
+        font-size: 3em;
+    }
+
+    .registro h2 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1em;
+        font-size: 2.5em;
+    }
+
+    .registro form {
+        padding: 1.5em;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 500px;
+        border-radius: 20px;
+        border: 2px solid var(--main-color);
+    }
+
+    .registro form label {
+        width: 100%;
+        padding: 0.2em;
+        margin-bottom: 0.5em;
+    }
+
+    .registro form input {
+        width: 100%;
+        margin-bottom: 1em;
+        padding: 0.8em;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: var(--text-color);
+    }
+
+    .registro form input[type='submit']{
+        margin-top: 1.5em;
+        background-color: var(--main-color);
+        color: var(--text-color);
+    }
+
+    .registro form input[type='submit']:active {
+        transform: scale(0.97);
+    }
+
+    .registro p {
+        margin-top: 1.2em;
+    }
+
+    .registro p a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .registro button {
+        background-color: var(--second-bg-color);
+        color: var(--text-color);
+        border: none;
+        padding:  0.5em 1em;
+        border-radius: 9px;
+        margin: top 1.5em;
+        font-size: 1em;
+    }

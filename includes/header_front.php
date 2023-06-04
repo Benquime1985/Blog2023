@@ -12,9 +12,9 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
         <!--CSS-->
-        <link href="../css/estilos.css" rel="stylesheet" />
+        <link href="css/estilos.css" rel="stylesheet" />
     </head>
 <body>
     
