@@ -2,7 +2,7 @@
     include 'includes/header_front.php';
 ?>
 
-    <section class="">
+    <section class="login">
         <h2>Login</h2>
         <form class="loginForm">
             <label">Email</label>
@@ -13,3 +13,7 @@
         </form>
         <p>No Tienes una cuenta?<a href="registro.php"> Resgistrarse</a></p>
     </section>
+
+<?php
+    include 'includes/footer.php';
+?>
