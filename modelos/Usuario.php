@@ -39,7 +39,7 @@
         }
 
         public function listar (){
-            $qry = "select * from view ". $this->table;
+            $qry = "select * from view_". $this->table;
             $st = $this->conn->prepare($qry);
             $st->execute();
             return $st->fetchAll(PDO::FETCH_OBJ);

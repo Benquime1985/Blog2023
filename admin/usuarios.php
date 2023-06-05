@@ -29,7 +29,7 @@
                             <td>juan</td>
                             <td>juan@sda</td>
                             <td>registrado</td>
-                            <td>2023-10-01</td>
+                            <td> 2023-10-01</td>
                             <td>
                                 <a href="editar_usuario.php" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></a>                                            
                             </td>
