@@ -10,7 +10,7 @@
             <label">Email</label>
             <input type="email" placeholder="Email" class="Email" required >
             <label">Contraseña</label>
-            <input type="password" placeholder="passwor" class="passwor" required>
+            <input type="password" placeholder="password" class="password" required>
             <input type="submit" value="Registrarse">
         </form>
         <p>No Tienes una cuenta?<a href="acceder.php"> Iniciar Seccion</a></p>

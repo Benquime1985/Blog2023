@@ -8,7 +8,7 @@
             <label">Email</label>
             <input type="email" placeholder="Email" class="Email" required autofocus>
             <label">Contraseña</label>
-            <input type="password" placeholder="passwor" class="passwor" required>
+            <input type="password" placeholder="password" class="password" required>
             <input type="submit" value="Iniciar Sesión">
         </form>
         <p>No Tienes una cuenta?<a href="registro.php"> Resgistrarse</a></p>
