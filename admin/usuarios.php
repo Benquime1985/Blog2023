@@ -1,9 +1,38 @@
 <?php
     include '../includes/header.php';
     include '../config/Mysql.php';
+    include '../modelos/Usuario.php';
+    $base = new Mysql();
+    $cx = $base->connect();
+    $usuarios = new Usuario($cx);
+    if (isset($_GET['mensaje'])){
+        $mensaje = $_GET['mensaje'];
+    }
+
     
 ?>
 
+<!--IMPRIMIR MENSAJES-->
+<div class="row">
+        <div class="col-md-12">
+            <?php if (isset($error)) :?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong><?=$error?></strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif ;?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <?php if (isset($mensaje)) : ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong><?=$mensaje?></strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif ;?>    
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-sm-6">
@@ -24,16 +53,18 @@
                     </tr>
                 </thead>
                     <tbody>
+                        <?php foreach($usuarios->listar() as $usuario):?>
                         <tr>
-                            <td>4</td>
-                            <td>juan</td>
-                            <td>juan@sda</td>
-                            <td>registrado</td>
-                            <td> 2023-10-01</td>
+                            <td><?= $usuario->id;?></td>
+                            <td><?=$usuario->nombre;?></td>
+                            <td><?=$usuario->email;?></td>
+                            <td><?=$usuario->rol;?></td>
+                            <td><?=$usuario->fecha_creacion;?></td>
                             <td>
-                                <a href="editar_usuario.php" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></a>                                            
+                                <a href="editar_usuario.php?id=<?= $usuario->id;?>" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></a>                                            
                             </td>
-                        </tr>                   
+                        </tr>
+                        <?php endforeach;?>
                     </tbody>       
                 </table>
             </div>
