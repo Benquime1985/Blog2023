@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    include './config/config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,6 +15,8 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+
+        <link rel="stylesheet" href="css/bootstrap-icons-1.2.1/font/bootstrap-icons.css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <!--CSS-->
