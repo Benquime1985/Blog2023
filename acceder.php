@@ -61,7 +61,7 @@
             <label">Contraseña</label>
             <input type="password" placeholder="password" name="password">
             
-            <button type="submit" class="acceder" id="acceder" name="acceder">Acceder</button>
+            <button type="submit" class="button" id="acceder" name="acceder">Acceder</button>
         </form>
         <p>No Tienes una cuenta? <a href="registro.php">Resgistrarse</a></p>
     </section>

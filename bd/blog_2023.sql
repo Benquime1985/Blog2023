@@ -18,7 +18,7 @@ create table usuarios(
     on delete restrict on update cascade
 );
 
-create table articulos(
+create table publicaciones(
     id int not null primary key auto_increment,
     titulo varchar(255) not null,
     imagen varchar(255) not null,
@@ -37,7 +37,7 @@ create table comentarios(
     estado int not null,
     fecha_creacion datetime not null default current_timestamp(),
     foreign key (usuario_id) references usuarios(id),
-    foreign key (articulo_id) references articulos(id)
+    foreign key (articulo_id) references publicaciones(id)
 );
 
 insert into roles values (1,'Administrador');
@@ -48,10 +48,10 @@ insert into usuarios values (null,'Novaly Briannet','novaly@hotmail.com','81dc9b
 insert into usuarios values (null,'Miguel Edgardo','miguel@hotmail.com','81dc9bdb52d04dc20036dbd8313ed055',1,'2023-05-06 14:31:00');
 insert into usuarios values (null,'Jose Mauricio','mauricio@hotmail.com','81dc9bdb52d04dc20036dbd8313ed055',2,'2023-05-06 14:31:00');
 
-insert into articulos values (null,'ARTICULO 1','img5.jpg','Texto Articulo 1','2023-05-06 14:31:00',1);
-insert into articulos values (null,'ARTICULO 2','img4.jpg','Texto Articulo 2','2023-05-06 14:31:00',2);
-insert into articulos values (null,'ARTICULO 3','img3.jpg','Texto Articulo 3','2023-05-06 14:31:00',3);
-insert into articulos values (null,'ARTICULO 4','img2.jpg','Texto Articulo 4','2023-05-06 14:31:00',2);
+insert into publicaciones values (null,'ARTICULO 1','img5.jpg','Texto Articulo 1','2023-05-06 14:31:00',1);
+insert into publicaciones values (null,'ARTICULO 2','img4.jpg','Texto Articulo 2','2023-05-06 14:31:00',2);
+insert into publicaciones values (null,'ARTICULO 3','img3.jpg','Texto Articulo 3','2023-05-06 14:31:00',3);
+insert into publicaciones values (null,'ARTICULO 4','img2.jpg','Texto Articulo 4','2023-05-06 14:31:00',2);
 
 
 insert into comentarios values (null,'COMENTARIO 1',1,1,0,'2023-05-06 14:31:00');
@@ -65,15 +65,15 @@ select u.id, u.nombre, u.email, u.password, r.nombre as rol, u.fecha_creacion
 from usuarios u, roles r
 where u.rol_id = r.id;
 
-create view view_articulos as
-select a.id, a.titulo, a.imagen, a.texto, a.usuario_id, u.nombre as autor, a.fecha_creacion
-from articulos a, usuarios u
-where a.usuario_id = u.id;
+create view view_publicaciones as
+select p.id, p.titulo, p.imagen, p.texto, p.usuario_id, u.nombre as autor, p.fecha_creacion
+from publicaciones p, usuarios u
+where p.usuario_id = u.id;
 
 create view view_comentarios as 
-select c.id, c.comentario, c.usuario_id, u.nombre as autor, c.articulo_id, a.titulo, a.usuario_id as prop_art, c.estado, a.fecha_creacion
+select c.id, c.comentario, c.usuario_id, u.nombre as autor, c.articulo_id, p.titulo, p.usuario_id as prop_art, c.estado, p.fecha_creacion
 from comentarios c
 inner join usuarios u
 on c.usuario_id = u.id
-inner join articulos a 
-on c.articulo_id = a.id;
+inner join publicaciones p 
+on c.articulo_id = p.id;
