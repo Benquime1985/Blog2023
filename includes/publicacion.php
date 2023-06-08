@@ -14,8 +14,8 @@
               <article>
                 <img src="img/articulos/<?=$publicacion->imagen?>" alt="Imagen del artículo">
                 <h2><?=$publicacion->titulo?></h2>
-                <p>Fecha de creación: <span class="date"><?=$publicacion->fecha_creacion?></span></p>
-                <exp><?=$publicacion->texto?></p>
+                <p>Fecha de creación: <span><?=formatearFecha($publicacion->fecha_creacion)?></span></p>
+                <exp><?=textoCorto($publicacion->texto,100)?></p>
                 <a href="detalle.php?id=<?=$publicacion->id?>" class="btn2">Ver más</a>
               </article>
             </div>

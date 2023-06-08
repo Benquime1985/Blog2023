@@ -33,11 +33,11 @@ create table comentarios(
     id int not null primary key auto_increment,
     comentario varchar(255) not null,
     usuario_id int not null,
-    articulo_id int not null,
+    publicacion_id int not null,
     estado int not null,
     fecha_creacion datetime not null default current_timestamp(),
     foreign key (usuario_id) references usuarios(id),
-    foreign key (articulo_id) references publicaciones(id)
+    foreign key (publicacion_id) references publicaciones(id)
 );
 
 insert into roles values (1,'Administrador');
@@ -71,9 +71,9 @@ from publicaciones p, usuarios u
 where p.usuario_id = u.id;
 
 create view view_comentarios as 
-select c.id, c.comentario, c.usuario_id, u.nombre as autor, c.articulo_id, p.titulo, p.usuario_id as prop_art, c.estado, p.fecha_creacion
+select c.id, c.comentario, c.usuario_id, u.nombre as autor, c.publicacion_id, p.titulo, p.usuario_id as prop_art, c.estado, p.fecha_creacion
 from comentarios c
 inner join usuarios u
 on c.usuario_id = u.id
 inner join publicaciones p 
-on c.articulo_id = p.id;
+on c.publicacion_id = p.id;
