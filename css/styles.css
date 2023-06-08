@@ -11,6 +11,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #00eeff;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -225,7 +229,7 @@ small, .small {
 
 mark, .mark {
   padding: 0.1875em;
-  background-color: var(--bs-highlight-bg);
+  background-color: ;
 }
 
 sub,
@@ -4203,7 +4207,8 @@ textarea.form-control-lg {
 .card-body {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-  color: var(--bs-card-color);
+  color: var(--text-color);
+  background-color: var(--second-bg-color);
 }
 
 .card-title {
@@ -4226,8 +4231,8 @@ textarea.form-control-lg {
 .card-header {
   padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
   margin-bottom: 0;
-  color: var(--bs-card-cap-color);
-  background-color: var(--bs-card-cap-bg);
+  color: var(--text-color);
+  background-color:var(--second-bg-color);
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
 }
 .card-header:first-child {

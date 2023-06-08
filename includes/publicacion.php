@@ -1,65 +1,24 @@
+<?php
+    include 'config/Mysql.php';
+    include 'modelos/Publicacion.php';
+    $base = new Mysql();
+    $cx = $base->connect();
+    $publicaciones = new Publicacion($cx);
+?>
+
 <div class="container-fluid">
-        <h1>Pasajeros Satisfechos</h1>
+        <h1>Pasajeros <span>Satisfechos</span></h1>
         <div class="row">
-          <div class="col-md-4">
-            <article>
-              <img src="img/articulos/img1.jpg" alt="Imagen del artículo">
-              <h2>Título del artículo</h2>
-              <p>Fecha de creación: <span class="date">1 de enero de 2023</span></p>
-              <exp>Comentario del artículo...</p>
-              <a href="" class="btn2">Ver más</a>
-            </article>
-          </div>
-  
-          <div class="col-md-4">
-            <article>
-              <img src="img/articulos/img2.jpg" alt="Imagen del artículo">
-              <h2>Título del artículo</h2>
-              <p>Fecha de creación: <span class="date">1 de enero de 2023</span></p>
-              <exp>Comentario del artículo...</p>
-              <a href="" class="btn2">Ver más</a>
-            </article>
-          </div>
-
-          <div class="col-md-4">
-            <article>
-              <img src="img/articulos/img3.jpg" alt="Imagen del artículo">
-              <h2>Título del artículo</h2>
-              <p>Fecha de creación: <span class="date">1 de enero de 2023</span></p>
-              <exp>Comentario del artículo...</p>
-              <a href="" class="btn2">Ver más</a>
-            </article>
-          </div>
-
-          <div class="col-md-4">
-            <article>
-              <img src="img/articulos/img4.jpg" alt="Imagen del artículo">
-              <h2>Título del artículo</h2>
-              <p>Fecha de creación: <span class="date">1 de enero de 2023</span></p>
-              <exp>Comentario del artículo...</p>
-              <a href="" class="btn2">Ver más</a>
-            </article>
-          </div>
-
-          <div class="col-md-4">
-            <article>
-              <img src="img/articulos/img5.jpg" alt="Imagen del artículo">
-              <h2>Título del artículo</h2>
-              <p>Fecha de creación: <span class="date">1 de enero de 2023</span></p>
-              <exp>Comentario del artículo...</p>
-              <a href="" class="btn2">Ver más</a>
-            </article>
-          </div>
-
-          <div class="col-md-4">
-            <article>
-              <img src="img/articulos/img1.jpg" alt="Imagen del artículo">
-              <h2>Título del artículo</h2>
-              <p>Fecha de creación: <span class="date">1 de enero de 2023</span></p>
-              <exp>Comentario del artículo...</p>
-              <a href="" class="btn2">Ver más</a>
-            </article>
-          </div>
-
+          <?php foreach ($publicaciones->listar(0,1) as $publicacion):?>
+            <div class="col-md-4">
+              <article>
+                <img src="img/articulos/<?=$publicacion->imagen?>" alt="Imagen del artículo">
+                <h2><?=$publicacion->titulo?></h2>
+                <p>Fecha de creación: <span class="date"><?=$publicacion->fecha_creacion?></span></p>
+                <exp><?=$publicacion->texto?></p>
+                <a href="detalle.php?id=<?=$publicacion->id?>" class="btn2">Ver más</a>
+              </article>
+            </div>
+          <?php endforeach; ?>    
       </div>
     </div>
