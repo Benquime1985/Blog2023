@@ -23,24 +23,30 @@
                         <tr>
                             <th>ID</th>
                             <th>Titulo</th>
-                            <th>Imagen</th> 
+                            <th>Imagen</th>
                             <th>Texto</th>
+                            <?php if($_SESSION['rol_id']==1):?>
+                            <th>Autor</th>
+                            <?php endif;?>
                             <th>Fecha de creación</th>              
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($publicacion->listar() as $publicacion):?>
+                        <?php foreach ($publicacion->listar($_SESSION['id'], $_SESSION['rol_id']) as $publicacion):?>
                             <tr>
                                 <td><?=$publicacion->id?></td>
                                 <td><?=$publicacion->titulo?></td>
                                 <td>
-                                    <img class="<?=RUTA_FRONT?>img/articulos/<?=$publicacion->imagen?>" style="width:80px;">
+                                    <img src="<?=RUTA_FRONT?>img/articulos/<?=$publicacion->imagen?>" style="width:180px;">
                                 </td>
                                 <td><?=$publicacion->texto?></td>
+                                <?php if($_SESSION['rol_id']==1):?>
+                                <td><?=$publicacion->autor?></td>
+                                <?php endif;?>
                                 <td><?=$publicacion->fecha_creacion?></td>                      
                                 <td>
-                                <a href="editar_articulo.php" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></a>                       
+                                <a href="editar_publi.php" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></a>                       
                                 </td>
                             </tr>
                         <?php endforeach;?>
