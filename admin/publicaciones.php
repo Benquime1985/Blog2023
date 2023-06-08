@@ -5,6 +5,9 @@
     $base = new Mysql();
     $cx = $base->connect();
     $publicacion = new Publicacion($cx);
+    if (isset($_GET['mensaje'])){
+        $mensaje = $_GET['mensaje'];
+    }
 ?>
 
 
@@ -13,7 +16,7 @@
             <h3>Lista de Publicaciones</h3>
         </div> 
         <div class="col-sm-4 offset-2">
-            <a href="crear_publi.php" class="btn btn-success w-100"><i class="bi bi-plus-circle-fill"></i> Nueva Publicacion</a>
+            <a href="gestion_publi.php?op=1" class="btn btn-success w-100"><i class="bi bi-plus-circle-fill"></i> Nueva Publicacion</a>
         </div>    
     </div>
     <div class="row mt-2 caja">
@@ -46,7 +49,7 @@
                                 <?php endif;?>
                                 <td><?=$publicacion->fecha_creacion?></td>                      
                                 <td>
-                                <a href="editar_publi.php" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></a>                       
+                                <a href="gestion_publi.php?op=2&id=<?=$publicacion->id?>" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></a>                       
                                 </td>
                             </tr>
                         <?php endforeach;?>
