@@ -18,7 +18,7 @@
 
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="<?=RUTA_ADMIN;?>publicaciones.php">Publicaciones</a></li>
-                            <li><a class="dropdown-item" href="<?=RUTA_ADMIN;?>">Comentarios</a></li> 
+                            <li><a class="dropdown-item" href="<?=RUTA_ADMIN;?>comentarios.php">Comentarios</a></li> 
                             <li><a class="dropdown-item" href="<?=RUTA_ADMIN;?>usuarios.php">Usuarios</a></li>                         
                         </ul>
 
@@ -38,7 +38,7 @@
                        
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="<?=RUTA_ADMIN;?>Publicaciones.php">Publicaciones</a></li>
-                            <li><a class="dropdown-item" href="<?=RUTA_ADMIN;?>">Comentarios</a></li>                        
+                            <li><a class="dropdown-item" href="<?=RUTA_ADMIN;?>comentarios.php">Comentarios</a></li>                        
                         </ul>
 
                     </li>
